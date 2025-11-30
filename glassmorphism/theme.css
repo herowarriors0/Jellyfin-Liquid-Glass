@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Global Variables */
 :root {
   --bg-color: #18181849;
   --blur: blur(16px) saturate(180%);
@@ -12,7 +11,6 @@
   --card-gap: 1vw;
 }
 
-/* Global Styles */
 html {
   box-sizing: border-box;
   font-family: "Inter", sans-serif !important;
@@ -20,7 +18,6 @@ html {
   padding: 0;
 }
 
-/* Elements with transparency and blur effects */
 .skinHeader.semiTransparent,
 .skinHeader,
 .actionSheet,
@@ -32,7 +29,6 @@ option {
 
 }
 
-/* Mobile devices use default blur instead of liquid glass */
 @media (max-width: 768px) {
   .skinHeader.semiTransparent,
   .skinHeader,
@@ -44,7 +40,6 @@ option {
 }
  
 
-/* Border styling for certain elements */
 .skinHeader,
 .actionSheet {
   border: 1px solid transparent;
@@ -52,7 +47,6 @@ option {
   border-image-source: var(--border-color);
 }
 
-/* Specific styles for .skinHeader */
 .skinHeader {
   border-left: 0;
   border-right: 0;
@@ -60,19 +54,16 @@ option {
   border-radius: 5px;
 }
 
-/* Form elements */
 select:enabled,
 option {
   border-style: solid;
   border-width: 1px;
 }
 
-/* Hidden elements */
 .selectVideoContainer {
   display: none !important;
 }
 
-/* Style for .skinHeader-withBackground.osdHeader */
 .skinHeader-withBackground.osdHeader {
   border: 0;
   -webkit-backdrop-filter: none !important;
@@ -86,7 +77,6 @@ option {
   z-index: 1;
 }
 
-/* Overlay elements */
 .cardOverlayContainer,
 .cardScalables,
 .cardPadder {
@@ -97,7 +87,6 @@ option {
   background-color: var(--transparent-bg);
 }
 
-/* List and transition effects */
 .listItem {
   transition: 0.3s all ease-in-out;
 }
@@ -108,7 +97,6 @@ option {
   backdrop-filter: var(--blur);
 }
 
-/* Card styles */
 .cardBox {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
               var(--border-color) border-box;
@@ -164,7 +152,6 @@ option {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-/* Text styles */
 .cardText {
   font-size: large;
   padding: 2%;
@@ -174,7 +161,6 @@ option {
   font-size: small;
 }
 
-/* Margin adjustments for overflow elements */
 
 .itemsContainer.vertical-wrap {
   display: flex;
@@ -198,7 +184,6 @@ option {
   padding-inline: 1.5vw;
 }
 
-/* Primary content styling */
 .detailPagePrimaryContainer {
   background-color: var(--transparent-bg);
   display: inline-table;
@@ -207,7 +192,6 @@ option {
   z-index: 2;
 }
 
-/* Layout adjustments for desktop */
 .layout-desktop .detailPageContent,
 .layout-desktop .infoWrapper, 
 .layout-desktop .mainDetailButtons{
@@ -228,7 +212,6 @@ option {
   margin-top: 0;
 }
 
-/* Desktop background settings */
 html.preload.layout-desktop {
   background-color: #181818;
 }
@@ -249,7 +232,6 @@ html.preload.layout-desktop {
   width: 80vw;
 }
 
-/* Backdrop container */
 .backdropContainer {
   height: 100vh;
   left: 20%;
@@ -349,7 +331,7 @@ html.preload.layout-desktop {
 
 #reactRoot:not(:has(.skinHeader.semiTransparent)) > .backdropContainer > .backdropImage {
   animation-name: parralax;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-duration: 1ms;
   animation-direction: alternate;
   animation-timeline: scroll(block nearest);
 }
@@ -386,7 +368,6 @@ html.preload.layout-desktop {
 }
 
 
-/* Hide unnecessary elements */
 .layout-desktop .detailImageContainer .card,
 .layout-desktop .itemTags,
 .layout-desktop .itemName.originalTitle {
@@ -404,7 +385,6 @@ html.preload.layout-desktop {
 }
 
 
-/* Status indicators */
 .countIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator,
@@ -416,13 +396,11 @@ html.preload.layout-desktop {
 }
 
 
-/* Hover effects for menu options */
 .actionSheetMenuItem:hover,
 .navMenuOption:hover {
   background-color: #00a5dc28;
 }
 
-/* Floating action button (FAB) for cards */
 .cardOverlayFab-primary {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background: linear-gradient(rgba(32, 32, 32, 0.1), rgba(32, 32, 32, 0.1)) padding-box,
@@ -437,7 +415,6 @@ html.preload.layout-desktop {
               var(--border-color) border-box;
 }
 
-/* Progress bars and inner card styles */
 .itemProgressBarForeground {
   background-color: #00a5dc93;
   border-radius: 10px;
@@ -459,12 +436,10 @@ html.preload.layout-desktop {
 
 
 
-/* Headings */
 h2 {
   font-weight: 700;
 }
 
-/* Desktop play button styles */
 .layout-desktop .btnPlay {
   background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
               var(--border-color) border-box;
@@ -487,7 +462,6 @@ h2 {
   flex-direction: row;
 }
 
-/* Media Query for hover effects */
 @media (hover: hover) and (pointer: fine) {
   .paper-icon-button-light:hover:not(:disabled) {
     background-color: #00a5dc11;
@@ -495,7 +469,6 @@ h2 {
   }
 }
 
-/* Other styles */
 .raised {
   border-radius: 4em;
 }
@@ -523,7 +496,6 @@ h2 {
   border-top-left-radius: 15px;
 }
 
-/* Now Playing Bar Styles */
 
 .nowPlayingBar {
   position: fixed;
@@ -538,7 +510,6 @@ h2 {
   z-index: 1;
 }
 
-/* Mobile devices use default blur for now playing bar */
 @media (max-width: 768px) {
   .nowPlayingBar {
     backdrop-filter: var(--blur) !important;
@@ -677,7 +648,6 @@ h2 {
   border-radius: 30px;
 }
 
-/* Show movie poster on the right when there's no backdrop */
 .layout-desktop:has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:not(:has(.cardImageIcon.tv)) {
   display: block !important;
   left: 60vw;
