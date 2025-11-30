@@ -649,6 +649,7 @@ h2 {
   top: 10vh;
   position: absolute;
   border-radius: 30px;
+  max-width: 280px;
 }
 
 .layout-desktop:has(.backgroundContainer:not(.withBackdrop)) .detailImageContainer .card:not(:has(.cardImageIcon.tv)) {
